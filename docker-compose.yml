@@ -10,7 +10,6 @@ services:
     environment:
       CORS_ORIGINS: "http://localhost:3000,http://localhost:5173,http://localhost:8080"
     volumes:
-      # Read-only монтирование, чтобы хот-апдейт модели не требовал пересборки
       - ./model:/app/model:ro
       - ./data:/app/data:ro
     restart: unless-stopped
@@ -21,13 +20,18 @@ services:
       retries: 3
       start_period: 60s
 
-  # frontend:
-  #   build: ./frontend          # Антон добавит когда фронт готов
-  #   container_name: sdm-churn-frontend
-  #   ports:
-  #     - "3000:3000"
-  #   environment:
-  #     - VITE_API_URL=http://localhost:8000
-  #   depends_on:
-  #     backend:
-  #       condition: service_healthy
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: sdm-churn-frontend:latest
+    container_name: sdm-churn-frontend
+    ports:
+      - "3000:80"
+    environment:
+      # При обращении из браузера API доступен через хост-машину
+      SDM_API_URL: "http://localhost:8000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped

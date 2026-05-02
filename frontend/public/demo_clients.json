@@ -1,0 +1,73 @@
+{
+  "generated_from": "backend.data_loader.precompute_scores(balanced)",
+  "n_picks": 5,
+  "client_ids": [
+    6423,
+    2332,
+    8689,
+    1039,
+    1799
+  ],
+  "items": [
+    {
+      "client_id": 6423,
+      "full_name": "Дарья Иванова",
+      "geography": "Регион",
+      "segment": "premium",
+      "churn_score": 0.9956,
+      "risk_level": "high",
+      "is_at_risk": true,
+      "offer_id": "manager_call",
+      "offer_title": "Звонок персонального менеджера",
+      "demo_role": "offer:manager_call"
+    },
+    {
+      "client_id": 2332,
+      "full_name": "Артём Попов",
+      "geography": "Регион",
+      "segment": "premium",
+      "churn_score": 0.9637,
+      "risk_level": "high",
+      "is_at_risk": true,
+      "offer_id": "comm_resettings",
+      "offer_title": "Настройка коммуникаций по интересам",
+      "demo_role": "offer:comm_resettings"
+    },
+    {
+      "client_id": 8689,
+      "full_name": "Андрей Лебедев",
+      "geography": "Санкт-Петербург",
+      "segment": "basic",
+      "churn_score": 0.9937,
+      "risk_level": "high",
+      "is_at_risk": true,
+      "offer_id": "cashback_grocery_5pct",
+      "offer_title": "Повышенный кешбэк 5% на продукты на 3 месяца",
+      "demo_role": "offer:cashback_grocery_5pct"
+    },
+    {
+      "client_id": 1039,
+      "full_name": "Павел Голубев",
+      "geography": "Санкт-Петербург",
+      "segment": "standard",
+      "churn_score": 0.7792,
+      "risk_level": "high",
+      "is_at_risk": true,
+      "offer_id": "app_reactivation_gift",
+      "offer_title": "Бонус 500 ₽ за вход в приложение",
+      "demo_role": "offer:app_reactivation_gift"
+    },
+    {
+      "client_id": 1799,
+      "full_name": "Юлия Козлова",
+      "geography": "Москва",
+      "segment": "basic",
+      "churn_score": 0.0255,
+      "risk_level": "low",
+      "is_at_risk": false,
+      "offer_id": "default_retention_call",
+      "offer_title": "Передать в отдел удержания",
+      "demo_role": "loyal"
+    }
+  ]
+}
