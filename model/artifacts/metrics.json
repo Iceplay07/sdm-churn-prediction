@@ -1,0 +1,56 @@
+{
+  "test": {
+    "roc_auc": 0.94499448482996,
+    "pr_auc": 0.7355222242477903,
+    "default_threshold": {
+      "threshold": 0.7757370341354527,
+      "roc_auc": 0.94499448482996,
+      "pr_auc": 0.7355222242477903,
+      "precision": 0.7662337662337663,
+      "recall": 0.6276595744680851,
+      "f1": 0.6900584795321637,
+      "confusion_matrix": {
+        "tp": 59,
+        "fp": 18,
+        "fn": 35,
+        "tn": 1583
+      }
+    }
+  },
+  "cv": {
+    "roc_auc_mean": 0.9276117161254198,
+    "roc_auc_std": 0.01606194287683499,
+    "pr_auc_mean": 0.7195232889244283,
+    "pr_auc_std": 0.052205062636360045
+  },
+  "data": {
+    "total_rows": 10000,
+    "active_rows": 8471,
+    "dropped_rows": 1529,
+    "n_features": 39,
+    "n_engineered_features": 10,
+    "positive_rate": 0.05560146381773108,
+    "positive_count": 471,
+    "negative_count": 8000,
+    "scale_pos_weight": 16.97347480106101
+  },
+  "model": {
+    "type": "CatBoostClassifier",
+    "best_iteration": 100,
+    "params": {
+      "iterations": 3000,
+      "depth": 6,
+      "learning_rate": 0.03,
+      "l2_leaf_reg": 5.0,
+      "min_data_in_leaf": 20,
+      "early_stopping_rounds": 100
+    }
+  },
+  "targets": {
+    "precision_target": 0.75,
+    "recall_target": 0.7,
+    "precision_target_met": true,
+    "recall_target_met": false
+  },
+  "trained_at": "2026-05-03T22:11:37.607223+00:00"
+}
