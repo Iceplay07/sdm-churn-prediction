@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# =============================================================
+# Data — большие файлы не пушим в git
+# =============================================================
+data/raw/transactions.csv
+data/raw/app_sessions.csv
+data/raw/communications.csv
+data/raw/clients.csv
+data/raw/_profiles_full.pkl
+data/processed/features.csv
+
+# =============================================================
+# Model artifacts — бинарники генерируются при обучении
+# =============================================================
+model/artifacts/model.pkl
+model/artifacts/feature_list.json
+model/artifacts/threshold.json
+
+# Логи обучения
+model/logs/
+*.log
